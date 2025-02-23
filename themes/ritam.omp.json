@@ -37,6 +37,7 @@
 					"template": "<#ffffff>on</> <#f54d27>{{ .HEAD }}{{ if gt .StashCount 0 }}</> \ueb4b {{ .StashCount }}{{ end }} ",
 					"type": "git"
 				},
+				
 				{
 					"foreground": "#906cff",
 					"style": "powerline",
@@ -52,14 +53,8 @@
 				{
 					"foreground": "#76b367",
 					"style": "powerline",
-					"template": "[\ue718 {{ end }}{{ .Full }}] ",
+					"template": "[\ue718 {{ .Full }}] ",
 					"type": "node"
-				},
-				{
-					"foreground": "#f5ddbf",
-					"style": "powerline",
-					"template": "[\ue76f {{ .Full }}]",
-					"type": "bun"
 				},
 				{
 					"foreground": "#f44336",
