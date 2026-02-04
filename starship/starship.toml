@@ -1,0 +1,71 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+format = """
+[ps](blue)\
+$username$hostname\
+$directory\
+$git_branch$git_status\
+$python$golang$nodejs\
+$character\
+"""
+
+
+# ---------------- Session ----------------
+
+[username]
+show_always = true
+style_user = "bold green"
+format = " [$user]($style)"
+
+[hostname]
+ssh_only = true
+style = "bold green"
+format = "[@$hostname]($style)"
+
+# ---------------- Path ----------------
+
+[directory]
+style = "bold blue"
+truncation_length = 0
+truncate_to_repo = false
+format = " [$path]($style)"
+
+# ---------------- Git ----------------
+
+[git_branch]
+symbol = ""
+style = "#F1502F"
+format = " [$branch]($style)"
+
+[git_status]
+style = "#F1502F"
+format = '[$modified$staged$stashed]($style)'
+modified = "!"
+staged = "+"
+stashed = "~$count"
+
+# ---------------- Languages ----------------
+
+[python]
+style = "#906cff"
+format = " [$symbol$virtualenv $version]($style)"
+
+[golang]
+style = "#7FD5EA"
+format = " [$symbol$version]($style)"
+
+[nodejs]
+style = "#76b367"
+format = " [$symbol$version]($style)"
+
+
+# ---------------- Prompt character ----------------
+
+[character]
+success_symbol = " [󰘧](bold green)"
+error_symbol = " [󰘧](bold red)"
+
